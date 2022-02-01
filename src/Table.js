@@ -36,11 +36,14 @@ const TableHeader = () => {
 
   class Table extends Component {
     render() {
+        
+        const {characterData} = this.props
+
       return (
         <table>
-          <TableHeader />
-          <TableBody />
-        </table>
+        <TableHeader />
+        <TableBody characterData={characterData} />
+      </table>
       )
     }
   }
