@@ -18,4 +18,17 @@ class App extends Component {
                 })
             });
     }
+
+    render() {
+        const { data } = this.state;
+
+        const result = data.map((entry, index) => {
+            console.log(entry);
+            return <li key={index}>{entry}</li>;
+        });
+
+        return <div className="container"><ul>{result}</ul></div>;
+    }
 }
+
+export default App;
